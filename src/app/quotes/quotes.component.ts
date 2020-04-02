@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -12,10 +12,9 @@ export class QuotesComponent implements OnInit {
     new Quotes(2,'ian','I have to buy cookies for the parrot'),
     new Quotes(3,'juma','Diana has her birthday coming up soon'),
   ]
-  toggleDetails(index: string | number){
+  toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  
   constructor() { }
 
   ngOnInit(): void {
