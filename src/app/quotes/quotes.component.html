@@ -1,0 +1,10 @@
+<h1>My Quotes</h1>
+<hr>
+<ul>
+  <div *ngFor='let quotes of quotes;let i = index'>
+    <li>{{quotes.name}}</li>
+    <button (click)='toggleDetails(i)'>Toggle Details</button>
+    <app-quotes-detail *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete) = 'completeQuotes($event,i)'></app-quotes-detail>
+  </div>
+</ul>
+<p *ngIf='quotes.length > 5'>You have too many goals</p>

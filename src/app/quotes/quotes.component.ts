@@ -15,11 +15,7 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index: string | number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  @Output() isComplete = new EventEmitter<boolean>();
-
-  quotesComplete(Complete:boolean){
-    this.isComplete.emit(Complete);
-  }
+  
   constructor() { }
 
   ngOnInit(): void {
