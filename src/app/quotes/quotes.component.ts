@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -14,6 +14,11 @@ export class QuotesComponent implements OnInit {
   ]
   toggleDetails(index: string | number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  quotesComplete(Complete:boolean){
+    this.isComplete.emit(Complete);
   }
   constructor() { }
 

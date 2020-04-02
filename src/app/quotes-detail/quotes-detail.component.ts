@@ -9,12 +9,12 @@ import { Quotes } from '../quotes';
 export class QuotesDetailComponent implements OnInit {
   [x: string]: any;
   @Input() quotes: Quotes;
-  @Output() isDelete= new EventEmitter<boolean>()
+  @Output() isComplequotes= new EventEmitter<boolean>()
   constructor() { }
 
 
-  quotesDelete(Delete:boolean){
-    this.Delete.emit(Delete);
+  quotesComplete(Complete:boolean){
+    this.Complete.emit(Complete);
   }
 
   ngOnInit(): void {
