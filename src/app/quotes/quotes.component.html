@@ -1,10 +1,23 @@
-<h1>My Quotes</h1>
-<hr>
-<ul>
-  <div *ngFor='let quotes of quotes;let i = index'>
-    <li>{{quotes.name}}</li>
-    <button (click)='toggleDetails(i)'>Toggle Details</button>
-    <app-quotes-detail *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete) = 'completequotes($event,i)' ></app-quotes-detail>
+<div class="container">
+  <h1>MY QUOTE</h1>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quotes of quotes;let i = index'>
+        <div>
+          <h6 id={{i}} appStrikethrough>{{quotes.name}} due on {{quotes.completeDate|date|uppercase}}</h6>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+        </div>
+
+        <div *ngIf='quotes.showDescription'>
+          <app-quotes-detail  [quotes]='quotes' (isComplequotes) = 'deletequotes($event,i)'></app-quotes-detail>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-quotes-form (addQuotes)="addNewQuotes($event)")></app-quotes-form>
+    </div>
   </div>
-</ul>
-<p *ngIf='quotes.length > 5'>You have too many goals</p>
+  <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+</div>

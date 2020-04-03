@@ -1,5 +1,5 @@
 <p>
     {{quotes.description}}
   </p>
-  <button (click)= 'quotesComplete(true)'>compete</button>
-  
+  <button (click)= 'delete(true)' class="btn btn-outline-danger">Delete Quotes</button>
+  <p>This quote will be complete in {{quotes.completeDate|dateCount}} days</p>
