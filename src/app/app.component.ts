@@ -7,9 +7,9 @@ import {Quotes} from './quotes'
 })
 export class AppComponent {
   quotes:Quotes[]=[
-    new Quotes(1, 'lucky', 'Find an online version and watch merlin find his son',new Date(2020,3,14)),
-    new Quotes(2,'ian','I have to buy cookies for the parrot',new Date(2019,6,9)),
-    new Quotes(3,'juma','Diana has her birthday coming up soon',new Date(2022,1,12)),
+    new Quotes(1, 'Lucky', 'Change the world by being yourself.',new Date(2020,1,1)),
+    new Quotes(2,'Jan','Every moment is a fresh beginning.',new Date(2020,1,1)),
+    new Quotes(3,'Juma','Never regret anything that made you smile.',new Date(2020,1,1)),
   ]
 }
   
