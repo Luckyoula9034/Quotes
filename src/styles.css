@@ -2,7 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body{
-    background-image:url("https://bit.ly/2Jxv6wh");
+    background-image:url("src/assets/office.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
