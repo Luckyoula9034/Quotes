@@ -10,6 +10,14 @@ export class QuotesDetailComponent implements OnInit {
   [x: string]: any;
   @Input() quotes: Quotes;
   @Output() isComplequotes= new EventEmitter<boolean>()
+  numberoflikes : number=0
+  numberofdislikes : number=0
+     likebuttonclick(){
+     this.numberoflikes++;
+}
+  dislikebuttonclick(){
+  this.numberofdislikes++;
+}
   constructor() { }
 
 
