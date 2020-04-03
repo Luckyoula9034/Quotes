@@ -26,11 +26,11 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
-  addNewQuotes(quotes: { id: number; completeDate: string | number | Date; push: (arg0: any) => void; }){
+  addNewQuotes(quotes){
     let quotesLength = this.quotes.length;
     quotes.id = quotesLength+1;
     quotes.completeDate = new Date(quotes.completeDate)
-    quotes.push(quotes)
+    this.quotes.push(quotes)
   }
   constructor() { }
 

@@ -13,7 +13,7 @@ export class QuotesDetailComponent implements OnInit {
   constructor() { }
 
 
-  deletequotes(Complete:boolean){
+  quoteDelete(Complete:boolean){
     this.isComplequotes.emit(Complete);
   }
 
