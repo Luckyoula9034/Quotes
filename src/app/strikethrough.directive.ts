@@ -13,7 +13,7 @@ export class StrikethroughDirective {
   }
 
   @HostListener("dblclick") onDoubleClicks(){
-    this.textDeco("red underline overline wavy")
+    this.textDeco("yellow underline overline wavy")
   }
 
   private textDeco(action:string){
